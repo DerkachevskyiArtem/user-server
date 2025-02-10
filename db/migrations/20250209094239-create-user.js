@@ -21,7 +21,7 @@ module.exports = {
       },
       imgSrc: {
         type: Sequelize.STRING(512),
-        field: 'img-src',
+        field: 'img_src',
         defaultValue: null
       },
       isMale: {

@@ -66,6 +66,10 @@ module.exports.updateUser = async (req, res, next) => {
       imgSrc: req.file ? req.file.filename : user.imgSrc,
     };
 
+    console.log('Validated Body:', validatedBody);
+    console.log('File:', req.file); 
+    console.log('Existing User imgSrc:', user.imgSrc); 
+
     const [rowsUpdated, updatedUser] = await User.update(updates, {
       where: { id: user.id },
       returning: true,

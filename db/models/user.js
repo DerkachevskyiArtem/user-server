@@ -33,12 +33,12 @@ module.exports = (sequelize, DataTypes) => {
       },
       imgSrc: {
         type: DataTypes.STRING(512),
-        field: 'img-src',
+        field: 'img_src',
         defaultValue: null,
       },
       isMale: {
         type: DataTypes.BOOLEAN(),
-        field: 'img-src',
+        field: 'is_male',
       },
       email: {
         type: DataTypes.STRING(256),
