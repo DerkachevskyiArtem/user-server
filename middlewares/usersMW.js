@@ -29,8 +29,6 @@ module.exports.createUserValidationMW = async (req, res, next) => {
   try {
     const { body } = req;
 
-    req.body.password = password;
-
     const user = await CREATE_USER_SCHEMA.validate(body);
     req.user = user;
     next();

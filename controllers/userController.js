@@ -5,8 +5,6 @@ module.exports.createUser = async (req, res, next) => {
   try {
     const { body, file } = req;
 
-    console.log('imgSrc:', body.imgSrc);
-
     const user = await User.create({
       ...body,
       imgSrc: file ? file.filename : null,
@@ -54,10 +52,6 @@ module.exports.getUser = async (req, res, next) => {
 module.exports.updateUser = async (req, res, next) => {
   try {
     const { user, validatedBody } = req;
-
-    if (!user || !user.id) {
-      throw createHttpError(400, 'User not found in request');
-    }
 
     const updatedUser = await user.update({
       ...validatedBody,
