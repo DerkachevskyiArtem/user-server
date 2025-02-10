@@ -3,6 +3,7 @@ const yup = require('yup');
 module.exports.CREATE_USER_SCHEMA = yup.object({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
+  imgSrc: yup.string(),
   isMale: yup.boolean().required(),
   email: yup
     .string()
@@ -23,6 +24,7 @@ module.exports.CREATE_USER_SCHEMA = yup.object({
 module.exports.UPDATE_USER_SCHEMA = yup.object({
   firstName: yup.string(),
   lastName: yup.string(),
+  imgSrc: yup.string(),
   isMale: yup.boolean(),
   email: yup
     .string()
