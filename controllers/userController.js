@@ -14,8 +14,6 @@ module.exports.createUser = async (req, res, next) => {
       imgSrc: file ? file.filename : null,
     });
 
-    console.log(user);
-
     res.status(201).send({ data: user });
   } catch (error) {
     next(error);
@@ -78,5 +76,3 @@ module.exports.updateUser = async (req, res, next) => {
     next(error);
   }
 };
-
-
